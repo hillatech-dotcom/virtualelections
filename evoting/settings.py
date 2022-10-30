@@ -159,8 +159,3 @@ EMAIL_HOST_PASSWORD= '0705476502'
 
 
 
-
-import django_heroku
-django_heroku.settings(locals())
-
-
