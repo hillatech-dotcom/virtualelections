@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Registered Voters</title>
+        <style>
+            h1{
+                text-align: center;
+            }
+            td,th{
+                text-align: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>List of Registered Voters</h1>
+        <table>
+            <thread>
+                <tr>
+                    <th>last_name</th>
+                    <th>first_name</th>
+                    <th>registration_no</th>
+                    <th>email</th>
+                    <th>phone</th>
+                </tr>
+            </thread>
+            <tbody>
+                {% for voter in voters %}
+                <tr>
+                    <td>{{ voter.admin.last_name }}</td>
+                    <td>{{ voter.admin.first_name}}</td>
+                    <td>{{ voter.admin.registration_no }}</td>
+                    <td>{{ voter.admin.email }}</td>
+                    <td>**{{ voter.phone|slice:"8:" }}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
