@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-tsy!+k+dpq$neldh%x%7tww&up#yy0wiqz#*e-&hk)axci_5kt'
+#SECRET_KEY = 'django-insecure-tsy!+k+dpq$neldh%x%7tww&up#yy0wiqz#*e-&hk)axci_5kt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -161,8 +161,6 @@ EMAIL_HOST_PASSWORD= '0705476502'
 
 
 import django_heroku
-django_heroku.settings(locals()
+django_heroku.settings(locals())
 
 
-$ python -m pip install django-heroku
-$ python -m pip freeze > requirements.txt
